@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>NetflixClone</title>
+    
+    
+ 
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+       .default-ltr-cache-1f97ztc{ box-sizing:border-box;position:absolute;height:13%;top: 690px;z-index:100;;margin:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border:solid .25rem transparent;border-top-left-radius:50% 100%;border-top-right-radius:50% 100%;border-bottom:none;
+                background:radial-gradient(
+                    50% 500% at 50% -420%,
+                    rgba(231, 64, 167, 0.4) 80%,
+                    rgba(0, 0, 0, 0.1) 100%
+                ),black;-webkit-background-clip:padding-box;background-clip:padding-box;}@media all{.default-ltr-cache-1f97ztc{width:200%;left:-50%;}}@media all and (min-width: 600px){.default-ltr-cache-1f97ztc{width:180%;left:-40%;}}@media all and (min-width: 960px){.default-ltr-cache-1f97ztc{width:150%;left:-25%;}}@media all and (min-width: 1280px){.default-ltr-cache-1f97ztc{width:130%;left:-15%;}}@media all and (min-width: 1920px){.default-ltr-cache-1f97ztc{width:120%;left:-10%;}}
+                .default-ltr-cache-1f97ztc:before{content:'';position:absolute;top:10px;right:0;bottom:0px;left:0;z-index:-1;margin-top:-.25rem;border-radius:inherit;
+                background:linear-gradient(
+                    to right,
+                    rgba(33, 13, 22, 1) 16%,
+                    rgba(184, 40, 105, 1),
+                    rgba(229, 9, 20, 1),
+                    rgba(184, 40, 105, 1),
+                    rgba(33, 13, 22, 1) 84%
+                );}
+
+        .default-ltr-cache-jtcpfi{
+            position:relative;z-index:2;text-align:center;}@media all{.default-ltr-cache-jtcpfi{margin-top:1.375em;
+            }}@media all and (min-width: 600px){.default-ltr-cache-jtcpfi{margin-top:1.875rem;}}@media 
+            all and (min-width: 960px){.default-ltr-cache-jtcpfi{margin-top:1.25rem;}}@media
+             all and (min-width: 1280px){.default-ltr-cache-jtcpfi{margin-top:1.375rem;}}
+        .movie {
+            font-weight: 700;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0.25rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.line1{
+     background:linear-gradient(
+                    to right,
+                    rgba(33, 13, 22, 1) 16%,
+                    rgba(184, 40, 105, 1),
+                    rgba(229, 9, 20, 1),
+                    rgba(184, 40, 105, 1),
+                    rgba(33, 13, 22, 1) 84%
+                );
+    border:solid 0.25rem;
+    border-top-left-radius: 50% 100% ;
+    border-top-right-radius: 50% 100% ;
+
+
+}
+.line2{
+    background:radial-gradient(
+                    50% 500% at 50% -420%,
+                    rgba(231, 64, 167, 0.4) 80%,
+                    rgba(0, 0, 0, 0.1) 100%
+                ) 
+}
+.card{
+   background-color: #5A4FCF;
+background-image: linear-gradient(315deg, #242124 0%, #201c53 74%);
+
+}
+.mainimage{
+    background-position: center center;
+    background-size: max(1200px,100vw);
+
+}
+a{
+    text-decoration: underline;
+}
+        
+    </style>
+</head>
+<body class="m-0 p-0 box-border overflow-x-hidden">
+
+<div class="w-[100%]">
+   <div class="h-screen bg-cover bg-no-repeat bg-center bg-[url('./images/netnew.jpg')]">
+
+        <div class="bg-black opacity-75 h-[100vh]" ></div>
+        <!--nav bar-->
+        <nav class="  w-[80vw] flex flex-wrap flex-row justify-between items-center place-content-center absolute top-0 mx-[13vh]  mt-5 ">
+            <img class="text-red-600" src="./images/logo.svg" height="150px" width="150px" alt="">
+            <div class="flex gap-3 align-middle">
+              
+            <div class="mt-2 grid grid-cols-1">
+            <select class="border border-gray-600 px-3 font-bold col-start-1 row-start-1 w-full appearance-none rounded-md text-white bg-transparent  pr-8 pl-5  text-[100px] outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <option>English</option>
+              <option>Hindi</option>
+             
+            </select>
+            <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-white sm:size-4">
+              <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+            </svg>
+          </div>
+                
+                <button class="text-white bg-red-600 mt-3 px-3 pb-1 rounded-md font-mullish">Sign In</button>
+            </div>         
+        </nav> 
+        <!--content-->
+        <div class="flex justify-center items-center place-content-center">
+        <div class=" text-center w-[88vw] mx-auto absolute top-[34vh] left-[15vh] text-white ">
+            <h1 class="text-6xl font-extrabold">Unlimited movies, TV <br> shows and more</h1>
+            <p class="mt-4 font-bold text-xl mb-4">Starts at ₹149. Cancel at any time.</p>
+            <p class="mt-2 text-lg mb-4">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="flex justify-center items-center gap-x-2">
+            <input class="bg-black bg-opacity-25 border border-gray-500 rounded-lg w-[380px] h-[60px] pl-5 " type="'text'" placeholder="Email address">
+            <button class="bg-red-600 flex justify-evenly items-center rounded-lg w-[250px] h-[60px] text-3xl  font-semibold hover:bg-red-600">Get Started
+                <svg  xmlns="http://www.w3.org/2000/svg"  fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path>
+
+                </svg>
+            </button>
+            </div>
+        </div>
+        </div>
+
+
+
+         <!--line partition-->
+
+         <!-- <div class="curve-container"><div class="default-ltr-cache-1f97ztc"></div></div>
+         <div class="default-ltr-cache-jtcpfi"></div> -->
+         <div class="line1 w-full h-4 absolute top-[720px]"><div class="line2 w-full h-16 absolute top-[8px]"></div></div>
+    </div>
+     
+    </div>
+    
+    <div class="bg-black h-fit relative pb-[200px] ">
+    <!--movies section-->
+
+ <!-- Netflix-style movie row with scroll buttons -->
+<div class="w-[1200px] mx-auto relative pt-7">
+  <h2 class="text-white pt-2 text-2xl font-sans font-bold">Trending Now</h2>
+
+  <!-- Left Scroll Button -->
+  <button id="scroll-left" aria-label="Previous"
+    class="absolute top-[50%] -translate-y-1/2 -left-[25px] z-10 bg-black bg-opacity-50 px-3 py-4 hover:bg-opacity-80 text-white">
+    ⬅️
+  </button>
+
+  <!-- Scrollable Movie Row -->
+  <div id="scroll-container"
+    class="flex overflow-x-auto scroll-smooth space-x-6 py-6 px-6 scrollbar-hide">
+    
+    <!-- Movie Items -->
+   <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/raid poster.jpg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">1</p>
+    </div>
+    
+    <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster2.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">2</p>
+    </div>
+    
+    <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster3.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">3</p>
+    </div>
+      <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster4.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">4</p>
+    </div>
+      <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster5.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">5</p>
+    </div>
+      <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster6.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">6</p>
+    </div>
+    
+    <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster7.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">7</p>
+    </div>
+    
+    <div class="group relative flex-shrink-0 w-[200px]">
+      <img src="./images/poster8.jpeg"
+        class="rounded-md transform transition-transform duration-300 group-hover:scale-105" />
+      <p class="movie text-8xl absolute top-[170px] -left-[3px]">8</p>
+    </div>
+
+
+    <!-- (Repeat other items as needed) -->
+  </div>
+
+  <!-- Right Scroll Button -->
+  <button id="scroll-right" aria-label="Next"
+    class="absolute top-[50%] -translate-y-1/2 -right-[50px] z-10 bg-black bg-opacity-50 px-3 py-4 hover:bg-opacity-80 text-white">
+    ➡️
+  </button>
+    </div>
+    <div class="w-[1200px] mx-auto ">
+    <h1 class="text-white pt-2 text-2xl font-sans font-bold">More Reasons to join</h1>
+    <!--cards-->
+    <div class="grid grid-cols-4 w-[1200px] z-50 mt-3 gap-x-4">
+        <!--card1-->
+        <div  class="card rounded-xl p-3 h-[250px] ">
+            <h2 class="text-white text-2xl font-bold">Enjoy on your TV</h2>
+            <p class="text-gray-300 pt-3">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            <svg class="absolute top-[620px] left-[370px]" width="72" height="72" viewBox="0 0 72 72" fill="none"><g id="television-core-small"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M37.2 53.3992C37.2 52.7365 36.6628 52.1992 36 52.1992H34.8C34.1373 52.1992 33.6 52.7365 33.6 53.3992V56.2636C33.6 56.9129 33.0834 57.4433 32.4347 57.4739C30.3013 57.5744 28.1719 57.7834 26.0546 58.1011L19.444 59.0926C18.2692 59.2688 17.4 60.2782 17.4 61.4662V62.0992C17.4 62.4304 17.6686 62.6992 18 62.6992H52.8C53.1314 62.6992 53.4 62.4304 53.4 62.0992V61.4662C53.4 60.2782 52.5309 59.2688 51.3561 59.0926L44.7454 58.1011C42.6282 57.7834 40.4987 57.5744 38.3653 57.4739C37.7167 57.4433 37.2 56.9129 37.2 56.2636V53.3992Z" fill="url(#paint0_radial_5179_1308)"></path><path id="Vector_2" d="M18.6 60.7388C18.6 60.2306 18.9587 59.796 19.4602 59.711C22.0196 59.2775 29.7585 58.0508 35.4 58.0508C41.0415 58.0508 48.7804 59.2775 51.3398 59.711C51.8412 59.796 52.2 60.2306 52.2 60.7388C52.2 60.902 52.0575 61.0268 51.8967 61.0004C50.1219 60.707 40.9704 59.2409 35.4 59.2409C29.8295 59.2409 20.678 60.707 18.9033 61.0004C18.7425 61.0268 18.6 60.902 18.6 60.7388Z" fill="url(#paint1_radial_5179_1308)"></path><path id="Vector_3" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint2_linear_5179_1308)"></path><path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path><path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M8.99995 12.6H63C63.663 12.6 64.2 13.1372 64.2 13.8V50.4H7.79995V13.8C7.79995 13.1372 8.33719 12.6 8.99995 12.6ZM7.19995 50.4V13.8C7.19995 12.8059 8.00581 12 8.99995 12H63C63.9942 12 64.8 12.8059 64.8 13.8V50.4V51.6C64.8 52.5941 63.9942 53.4 63 53.4H8.99995C8.00581 53.4 7.19995 52.5941 7.19995 51.6V50.4Z" fill="url(#paint4_radial_5179_1308)"></path><path id="Vector_6" d="M35.4 52.8C36.3941 52.8 37.2 52.3971 37.2 51.9C37.2 51.4029 36.3941 51 35.4 51C34.4059 51 33.6 51.4029 33.6 51.9C33.6 52.3971 34.4059 52.8 35.4 52.8Z" fill="url(#paint5_radial_5179_1308)"></path></g><defs><radialGradient id="paint0_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.3269 49.3723) rotate(118.526) scale(55.1579 46.2871)"><stop stop-color="#802600"></stop><stop offset="0.333333" stop-color="#6F181D"></stop><stop offset="0.666667" stop-color="#5B1333"></stop><stop offset="1" stop-color="#391945"></stop></radialGradient><radialGradient id="paint1_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.1077 53.6128) rotate(158.116) scale(32.7275 42.219)"><stop stop-color="#99421D"></stop><stop offset="0.333333" stop-color="#99161D"></stop><stop offset="0.666667" stop-color="#7D1845"></stop><stop offset="1" stop-color="#59216E"></stop></radialGradient><linearGradient id="paint2_linear_5179_1308" x1="10.4727" y1="14.9572" x2="56.1755" y2="51.4814" gradientUnits="userSpaceOnUse"><stop stop-color="#99161D"></stop><stop offset="0.245283" stop-color="#CA005B"></stop><stop offset="0.346698" stop-color="#FF479A"></stop><stop offset="0.46934" stop-color="#CC3CFF"></stop><stop offset="0.735849" stop-color="#BC1A22"></stop><stop offset="1" stop-color="#C94FF5"></stop></linearGradient><radialGradient id="paint3_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.6181 23.8286) rotate(90) scale(25.9571 25.8545)"><stop stop-color="#1C0E20" stop-opacity="0"></stop><stop offset="1" stop-color="#1C0E20"></stop></radialGradient><radialGradient id="paint4_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(54 20.1938) rotate(144.293) scale(47.2897 44.8232)"><stop stop-color="#EF7744"></stop><stop offset="0.333333" stop-color="#E50914"></stop><stop offset="0.666667" stop-color="#A70D53"></stop><stop offset="1" stop-color="#792A95"></stop></radialGradient><radialGradient id="paint5_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.525 51.3562) rotate(135) scale(4.58735)"><stop stop-color="#FFDCCC"></stop><stop offset="0.333333" stop-color="#FFBDC0"></stop><stop offset="0.666667" stop-color="#F89DC6"></stop><stop offset="1" stop-color="#E4A1FA"></stop></radialGradient></defs></svg>
+            <path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path>
+        </div>
+        <!--card2-->
+        <div  class="card rounded-xl p-3 h-[250px] ">
+            <h2 class="text-white text-2xl font-bold">Download your shows to watch offline</h2>
+            <p class="text-gray-300 pt-3">Save your favourites easily and always have something to watch.</p>
+            <svg class="absolute top-[620px] left-[675px]" width="72" height="72" viewBox="0 0 72 72" fill="none"><g id="television-core-small"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M37.2 53.3992C37.2 52.7365 36.6628 52.1992 36 52.1992H34.8C34.1373 52.1992 33.6 52.7365 33.6 53.3992V56.2636C33.6 56.9129 33.0834 57.4433 32.4347 57.4739C30.3013 57.5744 28.1719 57.7834 26.0546 58.1011L19.444 59.0926C18.2692 59.2688 17.4 60.2782 17.4 61.4662V62.0992C17.4 62.4304 17.6686 62.6992 18 62.6992H52.8C53.1314 62.6992 53.4 62.4304 53.4 62.0992V61.4662C53.4 60.2782 52.5309 59.2688 51.3561 59.0926L44.7454 58.1011C42.6282 57.7834 40.4987 57.5744 38.3653 57.4739C37.7167 57.4433 37.2 56.9129 37.2 56.2636V53.3992Z" fill="url(#paint0_radial_5179_1308)"></path><path id="Vector_2" d="M18.6 60.7388C18.6 60.2306 18.9587 59.796 19.4602 59.711C22.0196 59.2775 29.7585 58.0508 35.4 58.0508C41.0415 58.0508 48.7804 59.2775 51.3398 59.711C51.8412 59.796 52.2 60.2306 52.2 60.7388C52.2 60.902 52.0575 61.0268 51.8967 61.0004C50.1219 60.707 40.9704 59.2409 35.4 59.2409C29.8295 59.2409 20.678 60.707 18.9033 61.0004C18.7425 61.0268 18.6 60.902 18.6 60.7388Z" fill="url(#paint1_radial_5179_1308)"></path><path id="Vector_3" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint2_linear_5179_1308)"></path><path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path><path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M8.99995 12.6H63C63.663 12.6 64.2 13.1372 64.2 13.8V50.4H7.79995V13.8C7.79995 13.1372 8.33719 12.6 8.99995 12.6ZM7.19995 50.4V13.8C7.19995 12.8059 8.00581 12 8.99995 12H63C63.9942 12 64.8 12.8059 64.8 13.8V50.4V51.6C64.8 52.5941 63.9942 53.4 63 53.4H8.99995C8.00581 53.4 7.19995 52.5941 7.19995 51.6V50.4Z" fill="url(#paint4_radial_5179_1308)"></path><path id="Vector_6" d="M35.4 52.8C36.3941 52.8 37.2 52.3971 37.2 51.9C37.2 51.4029 36.3941 51 35.4 51C34.4059 51 33.6 51.4029 33.6 51.9C33.6 52.3971 34.4059 52.8 35.4 52.8Z" fill="url(#paint5_radial_5179_1308)"></path></g><defs><radialGradient id="paint0_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.3269 49.3723) rotate(118.526) scale(55.1579 46.2871)"><stop stop-color="#802600"></stop><stop offset="0.333333" stop-color="#6F181D"></stop><stop offset="0.666667" stop-color="#5B1333"></stop><stop offset="1" stop-color="#391945"></stop></radialGradient><radialGradient id="paint1_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.1077 53.6128) rotate(158.116) scale(32.7275 42.219)"><stop stop-color="#99421D"></stop><stop offset="0.333333" stop-color="#99161D"></stop><stop offset="0.666667" stop-color="#7D1845"></stop><stop offset="1" stop-color="#59216E"></stop></radialGradient><linearGradient id="paint2_linear_5179_1308" x1="10.4727" y1="14.9572" x2="56.1755" y2="51.4814" gradientUnits="userSpaceOnUse"><stop stop-color="#99161D"></stop><stop offset="0.245283" stop-color="#CA005B"></stop><stop offset="0.346698" stop-color="#FF479A"></stop><stop offset="0.46934" stop-color="#CC3CFF"></stop><stop offset="0.735849" stop-color="#BC1A22"></stop><stop offset="1" stop-color="#C94FF5"></stop></linearGradient><radialGradient id="paint3_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.6181 23.8286) rotate(90) scale(25.9571 25.8545)"><stop stop-color="#1C0E20" stop-opacity="0"></stop><stop offset="1" stop-color="#1C0E20"></stop></radialGradient><radialGradient id="paint4_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(54 20.1938) rotate(144.293) scale(47.2897 44.8232)"><stop stop-color="#EF7744"></stop><stop offset="0.333333" stop-color="#E50914"></stop><stop offset="0.666667" stop-color="#A70D53"></stop><stop offset="1" stop-color="#792A95"></stop></radialGradient><radialGradient id="paint5_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.525 51.3562) rotate(135) scale(4.58735)"><stop stop-color="#FFDCCC"></stop><stop offset="0.333333" stop-color="#FFBDC0"></stop><stop offset="0.666667" stop-color="#F89DC6"></stop><stop offset="1" stop-color="#E4A1FA"></stop></radialGradient></defs></svg>
+            <path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path>
+        </div>
+        <!--card3-->
+        <div  class="card rounded-xl p-3 h-[250px] ">
+            <h2 class="text-white text-2xl font-bold">Watch everywhere</h2>
+            <p class="text-gray-300 pt-3">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+            <svg class="absolute top-[620px] left-[980px]" width="72" height="72" viewBox="0 0 72 72" fill="none"><g id="television-core-small"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M37.2 53.3992C37.2 52.7365 36.6628 52.1992 36 52.1992H34.8C34.1373 52.1992 33.6 52.7365 33.6 53.3992V56.2636C33.6 56.9129 33.0834 57.4433 32.4347 57.4739C30.3013 57.5744 28.1719 57.7834 26.0546 58.1011L19.444 59.0926C18.2692 59.2688 17.4 60.2782 17.4 61.4662V62.0992C17.4 62.4304 17.6686 62.6992 18 62.6992H52.8C53.1314 62.6992 53.4 62.4304 53.4 62.0992V61.4662C53.4 60.2782 52.5309 59.2688 51.3561 59.0926L44.7454 58.1011C42.6282 57.7834 40.4987 57.5744 38.3653 57.4739C37.7167 57.4433 37.2 56.9129 37.2 56.2636V53.3992Z" fill="url(#paint0_radial_5179_1308)"></path><path id="Vector_2" d="M18.6 60.7388C18.6 60.2306 18.9587 59.796 19.4602 59.711C22.0196 59.2775 29.7585 58.0508 35.4 58.0508C41.0415 58.0508 48.7804 59.2775 51.3398 59.711C51.8412 59.796 52.2 60.2306 52.2 60.7388C52.2 60.902 52.0575 61.0268 51.8967 61.0004C50.1219 60.707 40.9704 59.2409 35.4 59.2409C29.8295 59.2409 20.678 60.707 18.9033 61.0004C18.7425 61.0268 18.6 60.902 18.6 60.7388Z" fill="url(#paint1_radial_5179_1308)"></path><path id="Vector_3" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint2_linear_5179_1308)"></path><path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path><path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M8.99995 12.6H63C63.663 12.6 64.2 13.1372 64.2 13.8V50.4H7.79995V13.8C7.79995 13.1372 8.33719 12.6 8.99995 12.6ZM7.19995 50.4V13.8C7.19995 12.8059 8.00581 12 8.99995 12H63C63.9942 12 64.8 12.8059 64.8 13.8V50.4V51.6C64.8 52.5941 63.9942 53.4 63 53.4H8.99995C8.00581 53.4 7.19995 52.5941 7.19995 51.6V50.4Z" fill="url(#paint4_radial_5179_1308)"></path><path id="Vector_6" d="M35.4 52.8C36.3941 52.8 37.2 52.3971 37.2 51.9C37.2 51.4029 36.3941 51 35.4 51C34.4059 51 33.6 51.4029 33.6 51.9C33.6 52.3971 34.4059 52.8 35.4 52.8Z" fill="url(#paint5_radial_5179_1308)"></path></g><defs><radialGradient id="paint0_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.3269 49.3723) rotate(118.526) scale(55.1579 46.2871)"><stop stop-color="#802600"></stop><stop offset="0.333333" stop-color="#6F181D"></stop><stop offset="0.666667" stop-color="#5B1333"></stop><stop offset="1" stop-color="#391945"></stop></radialGradient><radialGradient id="paint1_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.1077 53.6128) rotate(158.116) scale(32.7275 42.219)"><stop stop-color="#99421D"></stop><stop offset="0.333333" stop-color="#99161D"></stop><stop offset="0.666667" stop-color="#7D1845"></stop><stop offset="1" stop-color="#59216E"></stop></radialGradient><linearGradient id="paint2_linear_5179_1308" x1="10.4727" y1="14.9572" x2="56.1755" y2="51.4814" gradientUnits="userSpaceOnUse"><stop stop-color="#99161D"></stop><stop offset="0.245283" stop-color="#CA005B"></stop><stop offset="0.346698" stop-color="#FF479A"></stop><stop offset="0.46934" stop-color="#CC3CFF"></stop><stop offset="0.735849" stop-color="#BC1A22"></stop><stop offset="1" stop-color="#C94FF5"></stop></linearGradient><radialGradient id="paint3_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.6181 23.8286) rotate(90) scale(25.9571 25.8545)"><stop stop-color="#1C0E20" stop-opacity="0"></stop><stop offset="1" stop-color="#1C0E20"></stop></radialGradient><radialGradient id="paint4_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(54 20.1938) rotate(144.293) scale(47.2897 44.8232)"><stop stop-color="#EF7744"></stop><stop offset="0.333333" stop-color="#E50914"></stop><stop offset="0.666667" stop-color="#A70D53"></stop><stop offset="1" stop-color="#792A95"></stop></radialGradient><radialGradient id="paint5_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.525 51.3562) rotate(135) scale(4.58735)"><stop stop-color="#FFDCCC"></stop><stop offset="0.333333" stop-color="#FFBDC0"></stop><stop offset="0.666667" stop-color="#F89DC6"></stop><stop offset="1" stop-color="#E4A1FA"></stop></radialGradient></defs></svg>
+            <path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path>
+        </div>
+        <!--card4-->
+        <div  class="card rounded-xl p-3 h-[250px] ">
+            <h2 class="text-white text-2xl font-bold">Create profiles for kids</h2>
+            <p class="text-gray-300 pt-3">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+            <svg class="absolute top-[620px] left-[1280px]" width="72" height="72" viewBox="0 0 72 72" fill="none"><g id="television-core-small"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M37.2 53.3992C37.2 52.7365 36.6628 52.1992 36 52.1992H34.8C34.1373 52.1992 33.6 52.7365 33.6 53.3992V56.2636C33.6 56.9129 33.0834 57.4433 32.4347 57.4739C30.3013 57.5744 28.1719 57.7834 26.0546 58.1011L19.444 59.0926C18.2692 59.2688 17.4 60.2782 17.4 61.4662V62.0992C17.4 62.4304 17.6686 62.6992 18 62.6992H52.8C53.1314 62.6992 53.4 62.4304 53.4 62.0992V61.4662C53.4 60.2782 52.5309 59.2688 51.3561 59.0926L44.7454 58.1011C42.6282 57.7834 40.4987 57.5744 38.3653 57.4739C37.7167 57.4433 37.2 56.9129 37.2 56.2636V53.3992Z" fill="url(#paint0_radial_5179_1308)"></path><path id="Vector_2" d="M18.6 60.7388C18.6 60.2306 18.9587 59.796 19.4602 59.711C22.0196 59.2775 29.7585 58.0508 35.4 58.0508C41.0415 58.0508 48.7804 59.2775 51.3398 59.711C51.8412 59.796 52.2 60.2306 52.2 60.7388C52.2 60.902 52.0575 61.0268 51.8967 61.0004C50.1219 60.707 40.9704 59.2409 35.4 59.2409C29.8295 59.2409 20.678 60.707 18.9033 61.0004C18.7425 61.0268 18.6 60.902 18.6 60.7388Z" fill="url(#paint1_radial_5179_1308)"></path><path id="Vector_3" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint2_linear_5179_1308)"></path><path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path><path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M8.99995 12.6H63C63.663 12.6 64.2 13.1372 64.2 13.8V50.4H7.79995V13.8C7.79995 13.1372 8.33719 12.6 8.99995 12.6ZM7.19995 50.4V13.8C7.19995 12.8059 8.00581 12 8.99995 12H63C63.9942 12 64.8 12.8059 64.8 13.8V50.4V51.6C64.8 52.5941 63.9942 53.4 63 53.4H8.99995C8.00581 53.4 7.19995 52.5941 7.19995 51.6V50.4Z" fill="url(#paint4_radial_5179_1308)"></path><path id="Vector_6" d="M35.4 52.8C36.3941 52.8 37.2 52.3971 37.2 51.9C37.2 51.4029 36.3941 51 35.4 51C34.4059 51 33.6 51.4029 33.6 51.9C33.6 52.3971 34.4059 52.8 35.4 52.8Z" fill="url(#paint5_radial_5179_1308)"></path></g><defs><radialGradient id="paint0_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.3269 49.3723) rotate(118.526) scale(55.1579 46.2871)"><stop stop-color="#802600"></stop><stop offset="0.333333" stop-color="#6F181D"></stop><stop offset="0.666667" stop-color="#5B1333"></stop><stop offset="1" stop-color="#391945"></stop></radialGradient><radialGradient id="paint1_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.1077 53.6128) rotate(158.116) scale(32.7275 42.219)"><stop stop-color="#99421D"></stop><stop offset="0.333333" stop-color="#99161D"></stop><stop offset="0.666667" stop-color="#7D1845"></stop><stop offset="1" stop-color="#59216E"></stop></radialGradient><linearGradient id="paint2_linear_5179_1308" x1="10.4727" y1="14.9572" x2="56.1755" y2="51.4814" gradientUnits="userSpaceOnUse"><stop stop-color="#99161D"></stop><stop offset="0.245283" stop-color="#CA005B"></stop><stop offset="0.346698" stop-color="#FF479A"></stop><stop offset="0.46934" stop-color="#CC3CFF"></stop><stop offset="0.735849" stop-color="#BC1A22"></stop><stop offset="1" stop-color="#C94FF5"></stop></linearGradient><radialGradient id="paint3_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.6181 23.8286) rotate(90) scale(25.9571 25.8545)"><stop stop-color="#1C0E20" stop-opacity="0"></stop><stop offset="1" stop-color="#1C0E20"></stop></radialGradient><radialGradient id="paint4_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(54 20.1938) rotate(144.293) scale(47.2897 44.8232)"><stop stop-color="#EF7744"></stop><stop offset="0.333333" stop-color="#E50914"></stop><stop offset="0.666667" stop-color="#A70D53"></stop><stop offset="1" stop-color="#792A95"></stop></radialGradient><radialGradient id="paint5_radial_5179_1308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.525 51.3562) rotate(135) scale(4.58735)"><stop stop-color="#FFDCCC"></stop><stop offset="0.333333" stop-color="#FFBDC0"></stop><stop offset="0.666667" stop-color="#F89DC6"></stop><stop offset="1" stop-color="#E4A1FA"></stop></radialGradient></defs></svg>
+            <path id="Vector_4" d="M63 12H8.99995C8.00584 12 7.19995 12.8059 7.19995 13.8V51.6C7.19995 52.5941 8.00584 53.4 8.99995 53.4H63C63.9941 53.4 64.8 52.5941 64.8 51.6V13.8C64.8 12.8059 63.9941 12 63 12Z" fill="url(#paint3_radial_5179_1308)"></path>
+        </div>
+        
+    </div>
+    </div>
+
+
+   <!--email section-->
+   <div class="mt-16 place-content-center w-[80vw] mx-auto">
+    <p class="text-white mb-4 text-center text-lg">Ready to watch? Enter your email to create or restart your membership.</p>
+     <div class="flex justify-center items-center gap-x-2 w-[80vw]">
+            <input class="bg-black bg-opacity-25 border border-gray-500 rounded-lg w-[35vw] h-[60px] pl-5 " type="'text'" placeholder="Email address">
+            <button class="bg-red-500 text-white flex justify-evenly items-center rounded-lg w-[250px] h-[60px] text-3xl  font-semibold hover:bg-red-600">Get Started
+                <svg  xmlns="http://www.w3.org/2000/svg"  fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path>
+
+                </svg>
+            </button>
+            </div>
+   </div>
+
+   <!--last section-->
+   <div class="w-[1200px] mx-auto mt-16  text-gray-300 ">
+    <p class=" text-gray-300 mb-6 ">Questions? Call <a href="" > 000-800-919-1743</a></p>
+    <div class="w-[1200px] grid grid-cols-4">
+        <!--col1-->
+        <div class="flex flex-col gap-y-2">
+        <a href="">FAQ</a>
+        <a href="">Investors Relations</a>
+        <a href="">Privacy</a>
+        <a href="">Speed Test</a>
+        </div>
+         <!--col2-->
+        <div class="flex flex-col gap-y-2">
+        <a href="">Help Centre</a>
+        <a href="">Jobs</a>
+        <a href="">Cookie Preferences</a>
+        <a href="">Legal Notices</a>
+        </div>
+         <!--col3-->
+        <div class="flex flex-col gap-y-2">
+        <a href="">Account</a>
+        <a href="">Ways to Watch</a>
+        <a href="">Corporate Information</a>
+        <a href="">Only on Netflix</a>
+        </div>
+         <!--col4-->
+        <div class="flex flex-col gap-y-2">
+        <a href="">Media Centre</a>
+        <a href="">Terms of Use</a>
+        <a href="">Contact Us</a>
+       
+        </div>
+
+        
+        
+    </div>
+    <!--language button-->
+ <div class=" grid grid-cols-1 w-[100px] mt-16 ">
+            <select class="border border-gray-600 px-3 font-bold col-start-1 row-start-1  appearance-none rounded-md text-white bg-transparent  pr-8 pl-5  text-[100px] outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <option>English</option>
+              <option>Hindi</option>
+             
+            </select>
+            <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-white sm:size-4">
+              <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+            </svg>
+          </div>
+          <p class="mt-16 mb-10">Netflix India</p>
+          <p class="text-sm">This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="" class="text-blue-500">Learn more.</a></p>
+   </div>
+
+    </div>
+<!-- Scroll Logic -->
+<script>
+  const container = document.getElementById('scroll-container');
+  const leftBtn = document.getElementById('scroll-left');
+  const rightBtn = document.getElementById('scroll-right');
+
+  leftBtn.addEventListener('click', () => {
+    container.scrollBy({ left: -800, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    container.scrollBy({ left: 800, behavior: 'smooth' });
+  });
+</script>
+
+
+</body>
+</html>
