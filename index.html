@@ -7,122 +7,127 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-black text-white overflow-x-hidden">
+<body class="bg-black text-white">
 
 <!-- HERO -->
-<div class="relative h-screen bg-[url('./images/netnew.jpg')] bg-cover bg-center">
+<section class="relative min-h-screen flex flex-col">
 
-  <!-- overlay -->
+  <!-- Background -->
+  <div class="absolute inset-0 bg-[url('./images/netnew.jpg')] bg-cover bg-center"></div>
   <div class="absolute inset-0 bg-black/70"></div>
 
-  <!-- NAVBAR -->
-  <nav class="relative z-10 flex justify-between items-center px-4 sm:px-10 py-5">
-    <img src="./images/logo.svg" class="w-28 sm:w-36" />
+  <!-- NAV -->
+  <nav class="relative z-10 flex justify-between items-center px-4 py-4 sm:px-10">
+    <img src="./images/logo.svg" class="w-24 sm:w-32">
 
-    <div class="flex gap-3 items-center">
-      <select class="bg-transparent border px-3 py-1 rounded text-sm">
+    <div class="flex gap-2 sm:gap-4 items-center">
+      <select class="text-xs sm:text-sm bg-transparent border px-2 py-1 rounded">
         <option>English</option>
         <option>Hindi</option>
       </select>
-      <button class="bg-red-600 px-4 py-1 rounded">Sign In</button>
+      <button class="bg-red-600 px-3 py-1 sm:px-4 rounded text-sm">Sign In</button>
     </div>
   </nav>
 
   <!-- HERO CONTENT -->
-  <div class="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
-    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold">
-      Unlimited movies, TV shows and more
+  <div class="relative z-10 flex flex-col justify-center items-center text-center px-4 flex-1">
+
+    <h1 class="text-2xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+      Unlimited movies,<br class="sm:hidden"> TV shows and more
     </h1>
 
-    <p class="mt-4 text-lg sm:text-xl">
+    <p class="mt-3 text-sm sm:text-lg">
       Starts at ₹149. Cancel anytime.
     </p>
 
-    <p class="mt-2 text-sm sm:text-lg">
+    <p class="mt-2 text-xs sm:text-base">
       Ready to watch? Enter your email.
     </p>
 
-    <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full max-w-xl">
+    <!-- INPUT -->
+    <div class="mt-4 flex flex-col sm:flex-row gap-3 w-full max-w-md">
       <input
-        class="flex-1 p-3 rounded bg-black/50 border"
+        class="w-full p-3 rounded bg-black/60 border text-sm"
         placeholder="Email address"
       />
-      <button class="bg-red-600 px-6 py-3 rounded text-lg">
+      <button class="bg-red-600 px-5 py-3 rounded text-sm sm:text-lg">
         Get Started →
       </button>
     </div>
+
   </div>
-</div>
+</section>
 
 <!-- MOVIES -->
-<div class="px-4 sm:px-10 py-10">
-  <h2 class="text-xl sm:text-2xl font-bold mb-4">Trending Now</h2>
+<section class="px-4 py-8 sm:px-10">
 
-  <div class="flex overflow-x-auto gap-4 scrollbar-hide">
-    <!-- item -->
-    <img src="./images/poster2.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
-    <img src="./images/poster3.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
-    <img src="./images/poster4.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
-    <img src="./images/poster5.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
-    <img src="./images/poster6.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
-    <img src="./images/poster7.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
-    <img src="./images/poster8.jpeg" class="w-32 sm:w-40 rounded hover:scale-105 transition"/>
+  <h2 class="text-lg sm:text-2xl font-bold mb-4">Trending Now</h2>
+
+  <div class="flex gap-3 overflow-x-auto scrollbar-hide">
+
+    <img src="./images/poster2.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+    <img src="./images/poster3.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+    <img src="./images/poster4.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+    <img src="./images/poster5.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+    <img src="./images/poster6.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+    <img src="./images/poster7.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+    <img src="./images/poster8.jpeg" class="w-28 sm:w-40 flex-shrink-0 rounded">
+
   </div>
-</div>
+
+</section>
 
 <!-- FEATURES -->
-<div class="px-4 sm:px-10 py-10">
-  <h2 class="text-xl sm:text-2xl font-bold mb-6">More reasons to join</h2>
+<section class="px-4 py-8 sm:px-10">
+
+  <h2 class="text-lg sm:text-2xl font-bold mb-6">More reasons to join</h2>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-5 rounded">
-      <h3 class="font-bold text-lg">Enjoy on your TV</h3>
-      <p class="text-gray-300 mt-2 text-sm">
-        Watch on smart TVs, PlayStation, Xbox and more.
-      </p>
+    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-4 rounded">
+      <h3 class="font-bold text-base sm:text-lg">Enjoy on your TV</h3>
+      <p class="text-gray-300 text-sm mt-2">Watch on smart TVs and more.</p>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-5 rounded">
-      <h3 class="font-bold text-lg">Download shows</h3>
-      <p class="text-gray-300 mt-2 text-sm">
-        Save favourites easily and watch offline.
-      </p>
+    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-4 rounded">
+      <h3 class="font-bold text-base sm:text-lg">Download shows</h3>
+      <p class="text-gray-300 text-sm mt-2">Watch offline anytime.</p>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-5 rounded">
-      <h3 class="font-bold text-lg">Watch everywhere</h3>
-      <p class="text-gray-300 mt-2 text-sm">
-        Stream on phone, tablet, laptop and TV.
-      </p>
+    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-4 rounded">
+      <h3 class="font-bold text-base sm:text-lg">Watch everywhere</h3>
+      <p class="text-gray-300 text-sm mt-2">Stream on any device.</p>
     </div>
 
-    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-5 rounded">
-      <h3 class="font-bold text-lg">Kids profiles</h3>
-      <p class="text-gray-300 mt-2 text-sm">
-        Safe space for kids entertainment.
-      </p>
+    <div class="bg-gradient-to-br from-gray-900 to-indigo-900 p-4 rounded">
+      <h3 class="font-bold text-base sm:text-lg">Kids profiles</h3>
+      <p class="text-gray-300 text-sm mt-2">Safe content for kids.</p>
     </div>
 
   </div>
-</div>
 
+</section>
 
-<div class="px-4 sm:px-10 py-10 text-center">
-  <p class="mb-4">Ready to watch? Enter your email.</p>
+<!-- CTA -->
+<section class="px-4 py-8 sm:px-10 text-center">
 
-  <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-xl mx-auto">
-    <input class="flex-1 p-3 rounded bg-black/50 border" placeholder="Email address"/>
-    <button class="bg-red-600 px-6 py-3 rounded">Get Started →</button>
+  <p class="mb-4 text-sm sm:text-lg">
+    Ready to watch? Enter your email.
+  </p>
+
+  <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+    <input class="w-full p-3 rounded bg-black/60 border text-sm" placeholder="Email">
+    <button class="bg-red-600 px-5 py-3 rounded">Get Started →</button>
   </div>
-</div>
+
+</section>
 
 <!-- FOOTER -->
-<footer class="px-4 sm:px-10 py-10 text-gray-400 text-sm">
+<footer class="px-4 py-8 sm:px-10 text-gray-400 text-xs sm:text-sm">
 
   <p class="mb-6">Questions? Call 000-800-919-1743</p>
 
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
     <a href="#">FAQ</a>
     <a href="#">Help Centre</a>
     <a href="#">Account</a>
@@ -133,7 +138,8 @@
     <a href="#">Terms of Use</a>
   </div>
 
-  <p class="mt-10">Netflix India</p>
+  <p class="mt-8">Netflix India</p>
+
 </footer>
 
 </body>
